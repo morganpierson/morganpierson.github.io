@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/zbe4ycz.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zbe4ycz.css">
     <link rel="stylesheet" href="style/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="js/index.js"></script>
@@ -11,15 +13,43 @@
   <body>
     <!-- implement grid layout sections -->
     <aside class="side-bar">
-      <nav class="side-bar__nav"></nav>
+      <nav class="side-bar__nav">
+       <div class="side-bar__nav--item-img"><img class="side-bar__nav--home-btn" src="assets/spotify_home_clone.svg" alt="home-button"></div> 
+        <div class="side-bar__nav--items">
+          <div class="side-bar__nav--item"><img class="nav-item-img" src="assets/home.svg" alt="home">Home</div>
+          <div class="side-bar__nav--item"><img class="nav-item-img" src="assets/search.svg" alt="search">Search</div>
+          <div class="side-bar__nav--item"><img class="nav-item-img" src="assets/library.svg" alt="library">Your Library</div>
+        </div>
+        <div class="side-bar__nav__playlists">
+          <p>PLAYLISTS</p>
+          <div class="side-bar__nav__playlists--item">
+            <img src="assets/add_items.svg" alt="add-item-button"/>
+            Create Playlist
+          </div> 
+  
+            <div class="side-bar__nav__playlists--item">
+              <img src="assets/favorites_blue_gradient.svg" alt="favorite-item-button"/>
+              Liked Songs
+            </div>
+          
+          <div class="border-line"></div>
+        </div>
+      </nav>
     </aside>
-    <header class="header">
-      <div class="header__auth"></div>
-    </header>
+    
     <main class="main">
+      <header class="main__header">
+        <div class="main__header--auth">
+          <a href="#">SIGN UP</a>
+          <a href="#">LOG IN</a>
+        </div>
+      </header>
       <div class="main__banner"></div>
       <div class="main__content--header"></div>
-      <div class="main__content"></div>
+      <div class="main__content">
+        <ul class="main__content--song-list"></ul>
+      </div>
+      
     </main>
   </body>
 </html>

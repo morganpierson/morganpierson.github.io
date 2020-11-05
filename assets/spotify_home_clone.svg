@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="214" height="69" viewBox="0 0 214 69">
+  <g id="Group_9" data-name="Group 9" transform="translate(-469 -138)">
+    <text id="Spotify" transform="translate(550 152)" fill="#fff" font-size="40" font-family="Stratos-Medium, Stratos" font-weight="500" letter-spacing="0.015em"><tspan x="0" y="40">Spotify</tspan></text>
+    <g id="Group_8" data-name="Group 8">
+      <circle id="Ellipse_6" data-name="Ellipse 6" cx="34.5" cy="34.5" r="34.5" transform="translate(469 138)" fill="#fff"/>
+      <path id="Path_2" data-name="Path 2" d="M0,.033A79.1,79.1,0,0,1,18.4-2.553,74.008,74.008,0,0,1,36.429.033" transform="translate(482.917 180.877) rotate(8)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3.5"/>
+      <path id="Path_3" data-name="Path 3" d="M0,.216A84.333,84.333,0,0,1,19.984-2.593,86.453,86.453,0,0,1,40.122.216" transform="translate(482.287 170.547) rotate(8)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="5"/>
+      <path id="Path_4" data-name="Path 4" d="M0,.821A90.719,90.719,0,0,1,21.183-2.156,86.445,86.445,0,0,1,42.051.821" transform="translate(482.495 159.198) rotate(8)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="6"/>
+    </g>
+  </g>
+</svg>
