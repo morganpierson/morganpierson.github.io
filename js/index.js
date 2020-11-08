@@ -8,14 +8,14 @@ const fetchData = () => {
             let minutes;
             let songData;
             let j = 0;
-            let k = 1;
+            let k = 10;
             data = data.sort((a, b) => {
                 return a.gsx$danceability["$t"] - b.gsx$danceability["$t"]
             });
 
             for(let i = 0; i < data.length; i++) {
                 j = j > 6 ? 0 : j; 
-                k = k > 10 ? 1 : k;
+                k = k < 1 ? 10 : k;
                 songData = {}
                 timeDiff = data[i].gsx$durationms["$t"]
                 seconds = timeDiff / 1000
@@ -59,7 +59,7 @@ const fetchData = () => {
                     </div>
                 </td>
                 `
-                k++
+                k--
                 document.querySelector(".song-data-content").appendChild(tr)
             } 
         })    
