@@ -38,16 +38,82 @@
     </aside>
     
     <main class="main">
+      <div class="main__background">
+        <div class="main__banner">
+          <div class="main__banner--content">
+            <img src="assets/biebs.png" alt="">
+            <div class="main__banner--content-text">
+            
+              <h6>PLAYLIST</h6>
+              <h3>Happy Songs</h3>
+              <p>A pop playlist featuring the best songs of 2020 from Justin Bieber,&nbsp; <a href="#">Lunay</a> and more!</p>
+          </div>
+          </div>
+          
+        </div>
+        
+      </div>
       <header class="main__header">
+      <div class="main__header--nav">
+        <div class="main__header--nav-arrow">
+          <img src="assets/left_arrow.svg" alt="left-arrow">
+        </div>
+        <div class="main__header--nav-arrow">
+          <img src="assets/right_arrow.svg" alt="right-arrow">
+        </div>
+      </div>
         <div class="main__header--auth">
-          <a href="#">SIGN UP</a>
-          <a href="#">LOG IN</a>
+          <a href="#" class="btn btn-transparent">SIGN UP</a>
+          <a href="#" class="btn btn-white">LOG IN</a>
         </div>
       </header>
-      <div class="main__banner"></div>
-      <div class="main__content--header"></div>
+      
       <div class="main__content">
-        <ul class="main__content--song-list"></ul>
+        <div class="main__content--header">
+          <div class="main__content--header-options">
+            <div class="main-play-btn">
+              <img src="assets/play_button.svg" alt="large-play-button">
+            </div>
+            <div class="main-heart-btn">
+              <img src="assets/heart.svg" alt="like button">
+            </div>
+            <div class="main-more-options-btn">
+              <img src="assets/ellipse.svg" alt="more options button">
+            </div>
+          </div>
+        </div>
+        <!-- <div class="main__content--table-header">
+          <div class="track-num-title">
+          <p>#</p>
+          <p>Title</p>
+        </div>
+          <p>Album</p>
+          <p>Date &nbsp; Added</p>
+          <img src="assets/clock.svg" alt="play-time-icon" class="duration-icon">
+        </div>
+        <div class="border-line-large"></div>
+        <ul class="main__content--song-list"></ul> -->
+        <table class="song-data-table">
+          <col style="width:2%">
+	        <col style="width:38%">
+	        <col style="width:29%">
+	        <col style="width:29%">
+          <col style="width:2%">
+          <thead class="song-data-header">
+            <tr>
+              <th>#</th>
+              <th>TITLE</th>
+              <th>ALBUM</th>
+              <th>DATE &nbsp; ADDED</th>
+              <th><img src="assets/clock.svg" alt="play-time-icon" class="duration-icon"></th>
+            </tr>
+           
+          </thead>
+          
+          <tbody class="song-data-content">
+
+          </tbody>
+        </table>
       </div>
       
     </main>
