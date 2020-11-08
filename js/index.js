@@ -1,5 +1,5 @@
 const fetchData = () => {
-    
+    const albums = ["Hey Pex!", " Hire Me?", "I Love Design and Code", "I Also Love Music", "I've Been a Musician My Entire Life!", "I Love Your Mission", "And I'd Love to be a Part of the Team!"]
     axios.get("https://spreadsheets.google.com/feeds/list/1H5S6Vc-gCOCKLvQmfjfJmG2THtDb5Z_LQGaZJpWZQ4c/1/public/values?alt=json")
         .then(res => {
             let data = res.data.feed.entry.splice(0, 100)
@@ -7,9 +7,15 @@ const fetchData = () => {
             let seconds;
             let minutes;
             let songData;
-            
+            let j = 0;
+            let k = 1;
+            data = data.sort((a, b) => {
+                return a.gsx$danceability["$t"] - b.gsx$danceability["$t"]
+            });
+
             for(let i = 0; i < data.length; i++) {
-                console.log("DATA ", data[i])
+                j = j > 6 ? 0 : j; 
+                k = k > 10 ? 1 : k;
                 songData = {}
                 timeDiff = data[i].gsx$durationms["$t"]
                 seconds = timeDiff / 1000
@@ -18,35 +24,42 @@ const fetchData = () => {
                 seconds = Math.floor(seconds)
                 songData.artist = data[i].gsx$artist["$t"]
                 songData.songTitle = data[i].gsx$songtitle["$t"]
-                songData.album = "Hey Pex! Hire Me?"
-                
+                songData.album = albums[j];
+                j++;
                 songData.dateAdded = `Nov 7, 2020`
                 songData.duration = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`
-                console.log("SONG DATA ", songData)
                 let tr = document.createElement('tr');
                 tr.style.color = "white"
                 tr.className = "song-content"
                 tr.innerHTML = `
                 <td>
-                    ${i + 1}
+                    <div class="song-index opacity-fade">${i + 1}</div>
+                    <img src="assets/play_button.svg" class="hover-play-btn">
                 </td>
                 <td>
-                    <div class="song-title-artist">
+                    <div class="song-title-artist-img">
+                        <img src="assets/album_${k}.png" class="album-img">
+                        <div class="song-title-artist">
                         <div>${songData.songTitle}</div>
-                        <div>${songData.artist}</div>
+                        <div class="opacity-fade">${songData.artist}</div>
+                        </div>
                     </div>
                 </td>
-                <td>
+                <td class="opacity-fade">
                     ${songData.album}
                 </td>
-                <td>
+                <td class="opacity-fade">
                     ${songData.dateAdded}
                 </td>
                 <td>
-                    ${songData.duration}
+                    <div class="duration-td opacity-fade">
+                        <img src="assets/heart.svg" class="duration-heart">
+                        ${songData.duration}
+                        <img src="assets/ellipse.svg" class="song-options-btn">
+                    </div>
                 </td>
                 `
-                // li.innerHTML = `<div class="track-num-artist"><div>${i + 1}</div> <div class="song-title-artist"><p>${songData.songTitle}</p> <p>${songData.artist}</p></div></div> <div>${songData.album}</div> <div>${songData.dateAdded}</div> <div>${songData.duration}</div>`
+                k++
                 document.querySelector(".song-data-content").appendChild(tr)
             } 
         })    
