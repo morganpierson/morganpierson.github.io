@@ -451,3 +451,8 @@ thead th:last-child {
 tbody tr td:last-child {
   padding-right: 2rem;
 }
+
+.hover-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

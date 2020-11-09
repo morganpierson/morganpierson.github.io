@@ -41,12 +41,13 @@ const fetchData = () => {
                         <img src="assets/album_${k}.png" class="album-img">
                         <div class="song-title-artist">
                         <div>${songData.songTitle}</div>
-                        <div class="opacity-fade">${songData.artist}</div>
+                        <span class="opacity-fade hover-link">${songData.artist}</span>
                         </div>
                     </div>
                 </td>
                 <td class="opacity-fade">
-                    ${songData.album}
+                    <span class="hover-link">${songData.album}</span>
+                    
                 </td>
                 <td class="opacity-fade">
                     ${songData.dateAdded}
