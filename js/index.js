@@ -9,7 +9,7 @@ const fetchData = () => {
             let songData;
             let j = 0;
             let k = 10;
-            data = data.sort((a, b) => {
+           data.sort((a, b) => {
                 return a.gsx$danceability["$t"] - b.gsx$danceability["$t"]
             });
 
